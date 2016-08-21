@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <header>
+        @common.header()
+        <link rel="stylesheet" media="screen" href="/assets/stylesheets/presenter.css">
+    </header>
+    <body>
+        <div class="container">
+            <h1>Presenter Side</h1>
+            <div class="row">
+                <button type="button" id="send-code" class="btn btn-success">Send</button>
+            </div>
+            <div class="row">
+                <textarea id="input-code" placeholder="送信したいコードをここに記述してください。"></textarea>
+            </div>
+        </div>
+        @common.scripts()
+        <script type="text/javascript" src="/assets/javascripts/presenter.js"></script>
+    </body>
+
+</html>

@@ -4,6 +4,7 @@
 
 
 lazy val domain = project.in(file("code-presenter-domain"))
+  .dependsOn(infrastructure)
 lazy val infrastructure = project.in(file("code-presenter-infrastructure"))
 lazy val stream = project.in(file("code-presenter-stream"))
   .dependsOn(domain)
@@ -18,3 +19,4 @@ name := """code-presenter"""
 version := "1.0"
 
 scalaVersion := "2.11.8"
+
