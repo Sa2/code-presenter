@@ -7,7 +7,7 @@ $(function() {
     })
 
     function sendCode() {
-        var url = 'http://code-presenter.japaneast.cloudapp.azure.com:9000/presenter'
+        var url = 'http://code-presenter.japaneast.cloudapp.azure.com:9000//presenter/codesend'
         var data = '{}'
         $.post(
             url,
