@@ -1,0 +1,1 @@
+../../code-presenter-front/project/plugins.sbt

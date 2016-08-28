@@ -12,9 +12,5 @@ class RedisClient extends Client {
 
   // TODO: Configの取り方を考えたいね
   val redis = RedisBaseClient(host, port)
-}
 
-object RedisClient {
-  import RedisClient._
-  def apply: RedisClient = new RedisClient()
 }
