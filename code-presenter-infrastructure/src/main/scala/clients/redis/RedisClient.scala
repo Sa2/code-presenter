@@ -18,5 +18,4 @@ class RedisClient extends Client {
 object RedisClient {
   val redisObject = new RedisClient
   val redisClient = redisObject.redis
-  redisClient
 }
