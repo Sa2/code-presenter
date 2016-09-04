@@ -12,11 +12,12 @@ import scala.concurrent.Await
 /**
   * Created by Sa2 on 2016/08/28.
   */
-class CodeRepository @Inject()(val redisClient: RedisClient) {
+class CodeRepository @Inject()() {
+  val redisClient = RedisClient.redisClient
   val latestCodeHashStr = "latestCode"
   def storeToRedis(code: Code) = {
     // TODO: こけた時のためにエラーハンドリングが必要
-    redisClient.redis.set(latestCodeHashStr, code)
+    redisClient.set(latestCodeHashStr, code)
   }
   def resolveFromRedis() = {
     // TODO: こけた時のためにエラーハンドリングが必要
@@ -24,13 +25,13 @@ class CodeRepository @Inject()(val redisClient: RedisClient) {
 //    redisClient.redis.get[Code](latestCodeHashStr).map { result =>
 //      println(result.get)
 //    }
-    redisClient.redis.get(latestCodeHashStr).map { result =>
+    redisClient.get(latestCodeHashStr).map { result =>
       Code.byteStringFormatter.deserialize(result.get)
     }
   }
 
   def pingToRedis() = {
-    val futurePong = redisClient.redis.ping()
+    val futurePong = redisClient.ping()
     println("Ping sent!")
     futurePong.map(pong => {
       println(s"Redis replied with a $pong")
