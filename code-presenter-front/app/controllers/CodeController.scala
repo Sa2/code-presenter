@@ -2,9 +2,9 @@ package controllers
 
 import com.google.inject.Inject
 import model.domain.code.entity.Code
+import model.domain.code.service.CodeService
 import play.api.libs.json.{JsError, Json}
 import play.api.mvc.{Action, Controller}
-import services.code.CodeService
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
