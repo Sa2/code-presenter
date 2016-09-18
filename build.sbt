@@ -17,7 +17,7 @@ lazy val front = project.in(file("code-presenter-front")).enablePlugins(PlayScal
   .dependsOn(domain)
   .dependsOn(infrastructure)
   .dependsOn(common)
-lazy val root = (project in file("."))
+lazy val root = (project in file("."))//.dependsOn("akka-http-experimental")
 
 name := """code-presenter"""
 
