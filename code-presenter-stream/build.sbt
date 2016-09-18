@@ -11,6 +11,7 @@ lazy val stream = (project in file("."))
   .dependsOn(infrastructure)
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-actor" % "2.3.11",
-  "com.typesafe.akka" %% "akka-testkit" % "2.3.11" % "test",
+  "com.typesafe.akka" %% "akka-actor" % "2.4.10",
+  "com.typesafe.akka" %% "akka-http-experimental" % "2.4.10",
+  "com.typesafe.akka" %% "akka-testkit" % "2.4.10" % "test",
   "org.scalatest" %% "scalatest" % "2.2.4" % "test")
