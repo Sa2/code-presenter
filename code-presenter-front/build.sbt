@@ -17,5 +17,6 @@ libraryDependencies ++= Seq(
 //  jdbc,
 //  cache,
 //  ws,
+  "joda-time" % "joda-time" % "2.9.4",
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
 )
