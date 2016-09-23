@@ -4,3 +4,8 @@ lazy val domain = (project in file(".")).enablePlugins(PlayScala)
 
 name := """code-presenter-domain"""
 scalaVersion := "2.11.8"
+
+
+libraryDependencies ++= Seq(
+  "com.google.inject" % "guice" % "4.0"
+)

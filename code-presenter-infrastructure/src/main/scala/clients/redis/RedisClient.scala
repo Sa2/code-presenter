@@ -14,3 +14,8 @@ class RedisClient extends Client {
   val redis = RedisBaseClient(host, port)
 
 }
+
+object RedisClient {
+  val redisObject = new RedisClient
+  val redisClient = redisObject.redis
+}
